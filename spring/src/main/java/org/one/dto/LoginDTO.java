@@ -9,4 +9,6 @@ public class LoginDTO {
 	private String mid;
 	private String mpw;
 	private Date regdate;
+	
+	
 }
