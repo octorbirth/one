@@ -10,5 +10,5 @@ public class LoginDTO {
 	private String mpw;
 	private Date regdate;
 	private String sw;
-	
+	private String swsw2;
 }
