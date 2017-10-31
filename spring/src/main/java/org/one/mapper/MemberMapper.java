@@ -7,4 +7,5 @@ public interface MemberMapper {
 	
 	@Insert("insert into tbl_member (mid, mpw) values(#{mid}, #{mpw})")
     public void insert(LoginDTO dto);
+	
 }
