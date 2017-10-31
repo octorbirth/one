@@ -10,4 +10,5 @@ public interface MemberMapper {
 	
 	
 	//  ½Â¿ì±Û±Í
+	// Ãß°¡ 
 }
