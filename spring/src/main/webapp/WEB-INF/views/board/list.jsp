@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@include file="/WEB-INF/views/include/header.jsp"%>
 <link rel="stylesheet" href="/resources/assets/css/pagination.css" />
 <link rel="stylesheet" href="/resources/assets/css/custom.css?ver=3" />
@@ -31,7 +31,7 @@
 			</ul>
 		<div class='fr pt'>
 			<a href="#" class="button default small">전체목록</a>	
-			<a href="#" class="button special small">글 등록</a>
+			<a href="/board/register" class="button special small">글 등록</a>
 		</div>
 	</div><br>
 	
@@ -46,27 +46,7 @@
 											</thead>
 											<tbody>
 												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
+													<td>${ }</td>
 													<td>Ante turpis integer aliquet porttitor.</td>
 													<td>29.99</td>
 												</tr>
