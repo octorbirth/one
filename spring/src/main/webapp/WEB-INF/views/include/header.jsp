@@ -18,6 +18,12 @@
 					<a href="/board/list" class="logo">
 						<span class="symbol"><img src="/resources/images/logo.svg" alt="" /></span><span class="title">Bitone</span>
 					</a>
+					<ul class="icons" style="float:right;">
+						<li><a href="#" class="icon style1 fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon style1 fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon style1 fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon style1 fa-github"><span class="label">Github</span></a></li>
+					</ul>
 			</div>
 		</header>
 	<div id="main">
