@@ -27,6 +27,7 @@ public class BoardController {
 		log.info("입력받은 값: " + dto);
 		return;
 	}
+
 	
 	@GetMapping("/list")
 	public void list() { 
@@ -37,7 +38,5 @@ public class BoardController {
 		
         return;
     }
-	
-	
 
 }
