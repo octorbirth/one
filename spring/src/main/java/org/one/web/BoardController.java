@@ -44,7 +44,6 @@ public class BoardController {
         return;
     }
 	
-
 	@PostMapping("/modify")
 	public void modifyPost() {
 		return;
