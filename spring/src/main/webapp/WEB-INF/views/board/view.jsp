@@ -56,13 +56,13 @@
 <!-- Main -->
 <div id="main">
 	<div class="inner">
-		<h1>Generic Page</h1>
+		<h1>${board.title }</h1>
 		<div class="row">
 			<div class="8u 12u$(medium)">
 				<h4>By SW</h4>
 			</div>
 			<div class="2u 12u$(medium)" style="text-align: end">
-				<h4 class="icon fa-calendar-o"> 2017.11.01</h4>
+				<h4 class="icon fa-calendar-o"> ${board.regdate }</h4>
 			</div>
 			<div class="1u 12u$(medium)" style="text-align: end">
 				<h4 class="icon fa-eye"> 0</h4>

@@ -6,6 +6,7 @@ import org.one.dto.BoardDTO;
 import org.one.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,8 +23,9 @@ public class BoardController {
 	private BoardService service;
 	
 	@GetMapping("/view")
-	public void view() {
-		
+	public void view(BoardDTO dto,  Model model) {
+		model.addAttribute("board", service.get(dto.getBno()));
+		return;
 	}
 	
 	@GetMapping("/register")
@@ -41,14 +43,13 @@ public class BoardController {
 
 	
 	@GetMapping("/list")
-	public void list() { 
-		
+	public void list(Model model) { 
+		model.addAttribute("list", service.list());
         return;
     }
 	
 	@GetMapping("/modify")
 	public void modify() { 
-		
         return;
     }
 	

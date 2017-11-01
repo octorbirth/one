@@ -11,7 +11,7 @@
 <p>
 <p>
 <p>
-<form method="post" action="#">
+<form method="post" id='mainForm'>
 	<div class="field half first">
 		<h5>제목:</h5>
 		<input type="text" name="title" id="title" placeholder="Title">
@@ -36,8 +36,28 @@
 </form>
 
 
-<input type="submit" value="Send" class="special" style="float: right;">
+<input id="createBoard" type="submit" value="Send" class="special" style="float: right;">
 
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  
+  <script>
+  var mainForm = $("#mainForm");
+	
+	$("#createBoard").on("click",function(e){
+		e.preventDefault();
+		var title = mainForm.find("input[name='title']").val();
+		if(title.length === 0){
+			alert("제목을 입력하세요!");
+			return;
+		}
+		mainForm.submit();
+	});
+  
+  </script>
 
 
 <%@include file="/WEB-INF/views/include/footer.jsp"%>

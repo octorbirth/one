@@ -22,4 +22,5 @@
 
 	<mybatis-spring:scan base-package="org.one.mapper"/>
 
+	<context:component-scan base-package="org.one.service"></context:component-scan>
 </beans>
