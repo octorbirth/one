@@ -9,8 +9,8 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
-        <property name="url" value="jdbc:log4jdbc:mysql://localhost/bitone?useSSL=false"></property>
-		<property name="username" value="root"></property>
+        <property name="url" value="jdbc:log4jdbc:mysql://192.168.0.62:3306/bitone?useSSL=false"></property>
+		<property name="username" value="java96"></property>
 		<property name="password" value="java96"></property>
 
 	</bean>
