@@ -41,6 +41,14 @@
 .dropdown:hover .dropbtn {
 	background-color: #3e8e41;
 }
+
+.images-div {
+ 	width: 600px; 
+ 	height: 400px; 
+ 	border: solid;
+ 	border-color: lightgray;
+ 	border-radius: 10px;
+ }
 </style>
 
 
@@ -48,22 +56,19 @@
 <!-- Main -->
 <div id="main">
 	<div class="inner">
+		<h1>Generic Page</h1>
 		<div class="row">
-			<div>
-				<h1>Generic Page</h1>
-		
-			</div>
-			<div class="12u$" style="text-align: end">
-				<h4>2017.11.01</h4>
-			</div>
 			<div class="8u 12u$(medium)">
-				<h4>Writer : SW</h4>
+				<h4>By SW</h4>
 			</div>
 			<div class="2u 12u$(medium)" style="text-align: end">
-				<h4>Views : 0</h4>
+				<h4 class="icon fa-calendar-o"> 2017.11.01</h4>
 			</div>
-			<div class="2u 12u$(medium)" style="text-align: end">
-				<h4>Replies : 0</h4>
+			<div class="1u 12u$(medium)" style="text-align: end">
+				<h4 class="icon fa-eye"> 0</h4>
+			</div>
+			<div class="1u 12u$(medium)" style="text-align: end">
+				<h4 class="icon fa-comments"> 0</h4>
 			</div>
 		</div>
 
@@ -76,9 +81,16 @@
 						3</a>
 				</div>
 			</div>
-
 		</div>
-		<div class="12u$" style="margin-top: 20px">
+		
+		<div class="image main" align="center">
+		<div class="images-div">
+		    <div>your content</div>
+		    <div>your content</div>
+		    <div>your content</div>
+		</div>
+		</div>	
+		<div class="12u$">
 			<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum
 				primis in faucibus. Pellentesque venenatis dolor imperdiet dolor
 				mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor
@@ -98,5 +110,12 @@
 </div>
 
 <%@include file="/WEB-INF/views/include/footer.jsp"%>
-		
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
+<script type="text/javascript" src="/resources/assets/js/slick.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.images-div').slick();
+    });
 </script>
