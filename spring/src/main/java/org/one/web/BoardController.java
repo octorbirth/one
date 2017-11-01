@@ -41,8 +41,20 @@ public class BoardController {
         return;
     }
 	
+
+	@PostMapping("/modify")
+	public void modifyPost() {
+		return;
+	}
 	
+	@PostMapping("/remove")
+	public void removePost() {
+		
+	}
 	
-	
+	@GetMapping("/upload")
+	public void uploadGet() {
+		
+	}
 
 }
