@@ -15,7 +15,10 @@ import lombok.extern.java.Log;
 @Log
 public class BoardController {
 	
-	
+	@GetMapping("/view")
+	public void view() {
+		
+	}
 	
 	@GetMapping("/register")
 	public void registerGet() {    
