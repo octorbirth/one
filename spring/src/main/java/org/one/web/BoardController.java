@@ -40,5 +40,10 @@ public class BoardController {
 		
         return;
     }
+	
+	@PostMapping("/modify")
+	public void remove() {
+		return;
+	}
 
 }
