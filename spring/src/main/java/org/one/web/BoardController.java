@@ -29,7 +29,12 @@ public class BoardController {
 	}
 	
 	@GetMapping("/list")
-	public void list() {    
+	public void list() { 
+		
+		
+		
+		/// list 콘트롤러 추가
+		
         return;
     }
 	
