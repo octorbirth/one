@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@include file="/WEB-INF/views/include/header.jsp"%>
 <link rel="stylesheet" type="text/css" href="/resources/assets/css/slick-theme.css"/>
 <link rel="stylesheet" type="text/css" href="/resources/assets/css/slick.css"/>
@@ -56,13 +57,13 @@
 <!-- Main -->
 <div id="main">
 	<div class="inner">
-		<h1>Generic Page</h1>
+		<h1>${board.title }</h1>
 		<div class="row">
 			<div class="8u 12u$(medium)">
 				<h4>By SW</h4>
 			</div>
 			<div class="2u 12u$(medium)" style="text-align: end">
-				<h4 class="icon fa-calendar-o"> 2017.11.01</h4>
+				<h4 class="icon fa-calendar-o"> ${board.regdate }</h4>
 			</div>
 			<div class="1u 12u$(medium)" style="text-align: end">
 				<h4 class="icon fa-eye"> 0</h4>
@@ -102,11 +103,14 @@
 		</div>
 		<div class="12u$">
 			<ul class="actions">
-				<li><input type="submit" value="Modify" class="special" /></li>
-				<li><input type="reset" value="To List" /></li>
+				<li><button class="special button" data-oper='edit'/>Modify</li>
+				<li><button data-oper='list button'/>To List</li>
 			</ul>
 		</div>
 	</div>
+	
+	<form id="actionForm" action="" method="get">
+	</form>
 </div>
 
 <%@include file="/WEB-INF/views/include/footer.jsp"%>
@@ -116,6 +120,19 @@
 <script type="text/javascript" src="/resources/assets/js/slick.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+    	
         $('.images-div').slick();
+        
+        var actionForm = $('#actionForm');
+                
+   		$(".button[data-oper='list']").click(function(e) {
+   			actionForm.attr("action", "/board/list").submit();
+   		});
+
+   		$(".button[data-oper='edit']").click(function(e) {
+   			actionForm.append("<input type='hidden' name='bno' value='${board.bno}'>");
+   			actionForm.attr("action", "/board/modify").submit();
+   		});
+   		
     });
 </script>

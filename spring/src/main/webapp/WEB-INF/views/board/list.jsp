@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@include file="/WEB-INF/views/include/header.jsp"%>
 <link rel="stylesheet" href="/resources/assets/css/pagination.css" />
 <link rel="stylesheet" href="/resources/assets/css/custom.css?ver=3" />
@@ -31,7 +32,7 @@
 			</ul>
 		<div class='fr pt'>
 			<a href="#" class="button default small">전체목록</a>	
-			<a href="#" class="button special small">글 등록</a>
+			<a href="/board/register" class="button special small">글 등록</a>
 		</div>
 	</div><br>
 	
@@ -39,37 +40,20 @@
 										<table class="alt">
 											<thead>
 												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
+													<th>Bno</th>
+													<th>Title</th>
+													<th>Regdate</th>
 												</tr>
 											</thead>
 											<tbody>
+											<c:forEach var="item" items="${list}">
 												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
+													<td>${item.bno}</td>
+													<td><a href='view?bno=${item.bno}'>${item.title}</a></td>
+													<td><fmt:formatDate value="${item.regdate}"
+			pattern="yyyy-MM-dd HH:mm" /></td>
 												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
+											</c:forEach>
 											</tbody>
 										</table>
 									</div>
